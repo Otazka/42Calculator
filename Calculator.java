@@ -65,6 +65,10 @@ public class Calculator {
             break;
         }
         double result = 0;
+        if ((operator == '/' || operator == '%') && operand2 == 0) {
+            System.out.println("Division by 0 is not allowed");
+            return;
+        }
         switch (operator) {
             case '+':
                 result = operand1 + operand2;
