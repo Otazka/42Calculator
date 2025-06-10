@@ -7,12 +7,16 @@ public class Calculator {
     double operand1, operand2;
 
     Scanner userInput = new Scanner(System.in);
-    System.out.println("Enter operand1, operand2 and operator:");
-
+    System.out.println("Enter operand1:");
     operand1 = userInput.nextDouble();
-    operand2 = userInput.nextDouble();
-
+    System.out.println("Enter operator:");
     char operator = userInput.next().charAt(0);
+    System.out.println("Enter operand2:");
+    operand2 = userInput.nextDouble();
+    if (operand1 < -9999 || operand1 > 9999) {
+        System.out.println("Illegal argument, try again");
+        return;
+    }
     double result = 0;
 
     switch(operator) {
